@@ -24,7 +24,7 @@ impl Responder for Id {
     type Error = Error;
     type Future = Ready<Result<HttpResponse, Error>>;
 
-    fn respond_to(self, req: &actix_web::HttpRequest) -> Self::Future {
+    fn respond_to(self, _req: &actix_web::HttpRequest) -> Self::Future {
         let body = serde_json::json!({ "id": self.id });
 
         ready(Ok(HttpResponse::Ok()

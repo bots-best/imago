@@ -873,9 +873,9 @@ dependencies = [
  "eyre",
  "image",
  "itconfig",
+ "log",
  "serde",
  "serde_json",
- "url",
  "uuid",
 ]
 
@@ -1726,7 +1726,6 @@ dependencies = [
  "idna",
  "matches",
  "percent-encoding",
- "serde",
 ]
 
 [[package]]

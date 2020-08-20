@@ -24,3 +24,12 @@ impl<T> Future for Ready<T> {
         Poll::Ready(self.0.take().expect("`Ready` polled after completion"))
     }
 }
+
+/// Constructs a `HttpResponse` from a given message and
+/// a code.
+#[macro_export]
+macro_rules! error {
+    ($msg:expr, $code:ident) => {
+        actix_web::HttpResponse::$code().json(serde_json::json!({ "error": $msg }));
+    };
+}
