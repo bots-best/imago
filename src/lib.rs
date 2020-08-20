@@ -3,6 +3,7 @@
 #![allow(clippy::missing_errors_doc)]
 
 pub mod models;
+pub mod util;
 pub mod web;
 
 /// Configuration for the actix web application

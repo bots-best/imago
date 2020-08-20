@@ -1,12 +1,13 @@
 //! All models of the imago web server.
 
 use serde::{Deserialize, Serialize};
+use url::Url;
 use uuid::Uuid;
 
 #[derive(Debug, Hash, Serialize, Deserialize)]
 #[serde(transparent)]
 pub struct Id {
-    id: Uuid,
+    pub id: Uuid,
 }
 
 impl Into<Uuid> for Id {
@@ -23,7 +24,7 @@ impl From<Uuid> for Id {
 
 #[derive(Debug, Deserialize)]
 pub struct ImageUploadRequest {
-    pub url: String,
+    pub url: Url,
     pub formats: Vec<ImageFormat>,
     pub sizes: Vec<ImageSize>,
 }

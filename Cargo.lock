@@ -869,10 +869,13 @@ version = "0.1.0"
 dependencies = [
  "actix-rt",
  "actix-web",
+ "awc",
  "eyre",
  "image",
  "itconfig",
  "serde",
+ "serde_json",
+ "url",
  "uuid",
 ]
 
@@ -1723,6 +1726,7 @@ dependencies = [
  "idna",
  "matches",
  "percent-encoding",
+ "serde",
 ]
 
 [[package]]
